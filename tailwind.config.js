@@ -5,7 +5,8 @@ module.exports = {
       backgroundImage: 
       {
         'world-map': "url('/public/pokeworldmap.webp')",
-      }
+      },
+      height: ['100px']
     },
   },
   plugins: [],
