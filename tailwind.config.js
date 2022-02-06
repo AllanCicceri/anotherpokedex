@@ -4,9 +4,7 @@ module.exports = {
     extend: {
       backgroundImage: 
       {
-        'world-map': "url('/public/pokemonworldmap1.webp')",
-        'world-map': "url('/public/pokemonworldmap2.webp')",
-        'world-map': "url('/public/pokemonworldmap3.webp')",
+        'world-map': "url('/public/pokeworldmap.webp')",
       }
     },
   },
