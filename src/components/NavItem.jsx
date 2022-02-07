@@ -1,13 +1,20 @@
 import map from '../assets/imgs/map.svg'
 import pokeball from '../assets/imgs/pokeball.svg'
 import item from '../assets/imgs/item.svg'
+import {MdCatchingPokemon, MdExplore, MdScience} from 'react-icons/md'
+
 
 function NavItem({label, icon}){
-    const srcImg = (icon === 'map') ? map : (icon === 'pokeball') ? pokeball : (icon === 'item') ? item : ''
-
     return(
-        <div className="text-xl text-slate-700 font-bold flex items-center justify-center w-40">
-            <img src={srcImg} className="w-4 h-4 mr-2"></img>
+        <div className="text-xl text-slate-600 font-bold flex items-center justify-center w-40 h-full hover:cursor-pointer  hover:text-red-600 hover:border-b-4 hover:border-red-500">
+            {icon === 'pokeball' ? 
+            <MdCatchingPokemon className='mr-2'/>
+            : (icon === 'map') ?
+            <MdExplore className='mr-2'/>
+            : (icon === 'item') ?
+            <MdScience className='mr-2'/>
+            : ''
+            }
             {label}
         </div>
     )
