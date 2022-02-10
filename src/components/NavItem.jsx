@@ -6,17 +6,25 @@ import {Link} from 'react-router-dom'
 
 
 function NavItem({label, icon}){
-    return(
-        <a href={'/' +icon} className="text-xl text-slate-600 font-bold flex items-center justify-center w-40 h-full hover:cursor-pointer  hover:text-red-600 hover:border-b-4 hover:border-red-500">
 
-            {icon === 'pokeball' ? 
-            <MdCatchingPokemon className='mr-2'/>
-            : (icon === 'map') ?
-            <MdExplore className='mr-2'/>
-            : (icon === 'item') ?
-            <MdScience className='mr-2'/>
-            : ''
-            }
+    const renderIcon = () => {
+        switch (icon) {
+            case 'pokeball':
+                return <MdCatchingPokemon className='mr-2'/>
+                break;
+            case 'worldmap':
+                return <MdExplore className='mr-2'/>
+                break;
+            case 'item':
+                return <MdScience className='mr-2'/>
+                break;
+        }
+    }
+    
+    return(
+        <a href={'/' +icon} className="text-xl text-slate-600 font-bold flex items-center justify-center w-40 h-full hover:cursor-pointer  hover:text-red-600 hover:border-b-4 
+            hover:border-red-500">
+            {renderIcon()}
             {label}
         </a>
     )
