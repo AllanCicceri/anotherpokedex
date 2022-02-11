@@ -5,7 +5,10 @@ function PokemonsList(){
 
     useEffect(() => {
         const getPokemons = async () => {
-            console.log('entrou na getPokemons')
+            const apiResponse = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then(resp => resp.json())
+            const listOfPokemons = Array.from(apiResponse.results)
+            console.log(listOfPokemons)
+            console.log(apiResponse.next)
         }
 
         getPokemons()
