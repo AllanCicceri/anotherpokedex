@@ -1,10 +1,11 @@
 import Pagination from "../components/Pagination"
+import PokemonsList from "../components/PokemonsList"
 
 function Pokemons(){
 
     return (
         <div className="w-full h-full flex flex-col">
-            <div className="h-full">ToDo: Pokemons here!</div>
+            <PokemonsList/>
             <Pagination />
         </div>
     )
