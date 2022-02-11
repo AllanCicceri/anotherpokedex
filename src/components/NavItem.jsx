@@ -9,7 +9,7 @@ function NavItem({label, icon}){
 
     const renderIcon = () => {
         switch (icon) {
-            case 'pokeball':
+            case 'pokemons':
                 return <MdCatchingPokemon className='mr-2'/>
                 break;
             case 'worldmap':
@@ -22,7 +22,7 @@ function NavItem({label, icon}){
     }
     
     return(
-        <a href={'/' +icon} className="text-xl text-slate-600 font-bold flex items-center justify-center w-40 h-full hover:cursor-pointer  hover:text-red-600 hover:border-b-4 
+        <a href={'/' + icon} className="text-xl text-slate-600 font-bold flex items-center justify-center w-40 h-full hover:cursor-pointer  hover:text-red-600 hover:border-b-4 
             hover:border-red-500">
             {renderIcon()}
             {label}

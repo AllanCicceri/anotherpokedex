@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import WorldMap from '../pages/WorldMap'
 import Welcome from '../pages/Welcome'
-import NotFound from '../components/NotFoundPage'
+import Pokemons from '../pages/Pokemons'
 
 function Body() {
     return (
@@ -10,9 +10,9 @@ function Body() {
             <Router>
                 <Routes>
                     <Route path='/' element={<Welcome/>} />
-                    <Route path='/home' element={<Welcome/>} />
+                    <Route path='/pokemons' element={<Pokemons/>} />
                     <Route path='/worldmap' element={<WorldMap/>} />
-                    <Route path='*' element={<NotFound/>}/>
+                    <Route path='*' element={<Welcome/>}/>
                 </Routes>
             </Router>
 
