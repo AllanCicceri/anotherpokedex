@@ -9,20 +9,22 @@ function Pagination() {
     }
 
     return (
-        <ReactPaginate
-            previousLabel='<<'
-            nextLabel='>>'
-            breakLabel='...'
-            pageCount={20}
-            marginPagesDisplayed={2}
-            onPageChange={handlePageClick}
-            containerClassName={ulClassName}
-            pageClassName={liClassName}
-            breakClassName={liClassName}
-            previousClassName={liClassName}
-            nextClassName={liClassName}
-            activeClassName={'bg-slate-600'}
-        />
+        <div className="h-full flex items-end justify-end">
+            <ReactPaginate
+                previousLabel='<<'
+                nextLabel='>>'
+                breakLabel='...'
+                pageCount={20}
+                marginPagesDisplayed={2}
+                onPageChange={handlePageClick}
+                containerClassName={ulClassName}
+                pageClassName={liClassName}
+                breakClassName={liClassName}
+                previousClassName={liClassName}
+                nextClassName={liClassName}
+                activeClassName={'bg-slate-600'}
+            />
+        </div>
     )
 }
 
