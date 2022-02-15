@@ -1,55 +1,59 @@
 function returnOffSet(page) {
+    let returnValue = 0
+
     switch (page) {
-        case '1':
-            return '0'
+        case 1:
+            returnValue =  0
             break;
-        case '2':
-            return '20'
+        case 2:
+            returnValue =  20
             break;
-        case '3':
-            return '40'
+        case 3:
+            returnValue =  40
             break;
-        case '4':
-            return '60'
+        case 4:
+            returnValue =  60
             break;
-        case '5':
-            return '80'
+        case 5:
+            returnValue =  80
             break;
-        case '6':
-            return '100'
+        case 6:
+            returnValue =  100
             break;
-        case '7':
-            return '120'
+        case 7:
+            returnValue =  120
             break;
-        case '8':
-            return '140'
+        case 8:
+            returnValue =  140
             break;
-        case '9':
-            return '160'
+        case 9:
+            returnValue =  160
             break;
-        case '10':
-            return '180'
+        case 10:
+            returnValue =  180
             break;
-        case '11':
-            return '200'
+        case 11:
+            returnValue =  200
             break;
-        case '12':
-            return '220'
+        case 12:
+            returnValue =  220
             break;
-        case '13':
-            return '240'
+        case 13:
+            returnValue =  240
             break;
-        case '14':
-            return '260'
+        case 14:
+            returnValue =  260
             break;
-        case '15':
-            return '280'
+        case 15:
+            returnValue =  280
             break;
 
         default:
-            return '0'
+            returnValue =  0
             break;
     }
+
+    return returnValue
 }
 
 async function returnPokemonList(page) {
