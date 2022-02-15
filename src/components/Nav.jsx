@@ -1,5 +1,4 @@
 import NavItem from "./NavItem"
-import {BrowserRouter as Router, Link} from 'react-router-dom'
 
 function Nav(){
     return(
@@ -8,7 +7,6 @@ function Nav(){
                 <NavItem label="Pokemons" icon="pokemons"/>
                 <NavItem label="Items" icon="item"/>
             </div>
-        
     )
 }
 

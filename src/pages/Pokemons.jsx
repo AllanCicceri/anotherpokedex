@@ -2,13 +2,14 @@ import { useState,useEffect, useMemo } from "react"
 import Pagination from "../components/Pagination"
 import PokemonsList from "../components/PokemonsList"
 import PokeListContext from '../context/pokemonlist-context'
-import {returnPokemonList} from '../assets/js/Util'
+import {returnPokemonList} from '../assets/js/util'
 
 function Pokemons(){
     const [pokemonList, setPokemonsList] = useState([])
-    const memoizedValue = useMemo(()=>{}, [pokemonList])
+    const memoizedListOfPokemons = useMemo(()=>{}, [pokemonList])
 
     useEffect(() => {
+        console.log('entro')
         const getPokemons = async () => {
             const listOfPokemons = await returnPokemonList(0)
 
@@ -16,7 +17,7 @@ function Pokemons(){
         }
 
         getPokemons()
-    }, [memoizedValue])
+    }, [memoizedListOfPokemons])
 
     return (
         <PokeListContext.Provider value={[pokemonList, setPokemonsList]}>

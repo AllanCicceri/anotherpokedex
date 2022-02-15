@@ -1,12 +1,12 @@
 import ReactPaginate from "react-paginate";
-import {returnOffSet} from '../assets/js/Util'
+import {returnOffSet} from '../assets/js/util'
 
 function Pagination({pageClick}) {
     const liClassName = 'rounded shadow-sm border border-slate-50 px-2 hover:bg-slate-100'
     const ulClassName = 'bg-white px-4 py-3 flex justify-end border-t border-slate-200 text-slate-400'
 
     const handlePageClick = data => {
-        const page = data.selected + 1
+        const page = data.selected
         const offset = returnOffSet(page)
 
         pageClick(offset)
