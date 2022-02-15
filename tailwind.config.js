@@ -10,6 +10,9 @@ module.exports = {
       {
         'world-map': "url('/public/pokeworldmap.webp')",
       },
+      height:{
+        '100px':"100px"
+      }
 
     },
   },

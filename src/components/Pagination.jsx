@@ -1,20 +1,24 @@
 import ReactPaginate from "react-paginate";
+import {returnOffSet} from '../assets/js/Util'
 
-function Pagination() {
+function Pagination({pageClick}) {
     const liClassName = 'rounded shadow-sm border border-slate-50 px-2 hover:bg-slate-100'
     const ulClassName = 'bg-white px-4 py-3 flex justify-end border-t border-slate-200 text-slate-400'
 
     const handlePageClick = data => {
-        console.log(data.selected)
+        const page = data.selected + 1
+        const offset = returnOffSet(page)
+
+        pageClick(offset)
     }
 
     return (
-        <div className="h-full flex items-end justify-end">
+        <div className="h-100px flex items-end justify-end">
             <ReactPaginate
                 previousLabel='<<'
                 nextLabel='>>'
                 breakLabel='...'
-                pageCount={20}
+                pageCount={15}
                 marginPagesDisplayed={2}
                 onPageChange={handlePageClick}
                 containerClassName={ulClassName}
