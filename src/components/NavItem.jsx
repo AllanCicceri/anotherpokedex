@@ -1,21 +1,24 @@
 import { MdCatchingPokemon, MdExplore, MdScience } from 'react-icons/md'
-import { BrowserRouter as Router, Routes, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function NavItem({ label, icon }) {
+    let returnIcon = null
 
     const renderIcon = () => {
         switch (icon) {
             case 'pokemons':
-                return <MdCatchingPokemon className='mr-2' />
+                returnIcon = <MdCatchingPokemon className='mr-2' />
                 break;
             case 'worldmap':
-                return <MdExplore className='mr-2' />
+                returnIcon = <MdExplore className='mr-2' />
                 break;
             case 'item':
-                return <MdScience className='mr-2' />
+                returnIcon = <MdScience className='mr-2' />
                 break;
         }
+    
+        return returnIcon
     }
 
     return (

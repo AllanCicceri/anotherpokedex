@@ -9,7 +9,6 @@ function Pokemons(){
     const memoizedListOfPokemons = useMemo(()=>{}, [pokemonList])
 
     useEffect(() => {
-        console.log('entro')
         const getPokemons = async () => {
             const listOfPokemons = await returnPokemonList(0)
 

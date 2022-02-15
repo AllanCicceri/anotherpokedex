@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import WorldMap from '../pages/WorldMap'
 import Welcome from '../pages/Welcome'
 import Pokemons from '../pages/Pokemons'
+import Pokemon from '../pages/Pokemon'
 
 function Body() {
     return (
@@ -10,6 +11,7 @@ function Body() {
                 <Route path='/' element={<Welcome />} />
                 <Route path='/pokemons' element={<Pokemons />} />
                 <Route path='/worldmap' element={<WorldMap />} />
+                <Route path='/pokemon' element={<Pokemon />}/>
                 <Route path='*' element={<Welcome />} />
             </Routes>
         </div>
