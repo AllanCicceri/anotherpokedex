@@ -5,8 +5,10 @@ import Pokemons from '../pages/Pokemons'
 import Pokemon from '../pages/Pokemon'
 
 function Body() {
+    const lgClasses = 'lg:w-4/6'
+
     return (
-        <div className="w-3/5 h-4/5 p-4 bg-white rounded-xl shadow-2xl">
+        <div className={`w-5/6 h-5/6  p-4 bg-white rounded-xl shadow-2xl ${lgClasses}`}>
             <Routes>
                 <Route path='/' element={<Welcome />} />
                 <Route path='/pokemons' element={<Pokemons />} />
