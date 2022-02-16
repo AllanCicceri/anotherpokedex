@@ -2,10 +2,10 @@ import { useLocation } from "react-router-dom"
 
 function Pokemon({props}){
     const location = useLocation()
-    const {teste} = location.state
+    const {name} = location.state
     return(
         <div>
-            {teste}
+            {name}
         </div>
     )
 }
