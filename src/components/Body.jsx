@@ -8,7 +8,7 @@ function Body() {
     const lgClasses = 'lg:w-4/6'
 
     return (
-        <div className={`w-5/6 h-5/6  p-4 bg-white rounded-xl shadow-2xl ${lgClasses}`}>
+        <div className={`w-5/6 h-5/6 p-4 bg-white rounded-xl shadow-2xl ${lgClasses}`}>
             <Routes>
                 <Route path='/' element={<Welcome />} />
                 <Route path='/pokemons' element={<Pokemons />} />

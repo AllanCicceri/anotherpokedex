@@ -3,6 +3,9 @@ import PokeListContext from '../context/pokemonlist-context'
 import { Link } from 'react-router-dom'
 
 function PokemonsList() {
+    const mdGridClasses = 'md:grid md:grid-cols-2 md:grid-rows-10'
+    const lgGridClasses = 'lg:grid lg:grid-cols-4 lg:grid-rows-5'
+
     const[pokemonsList] = useContext(PokeListContext)
  
     const renderListOfPokemons = () => {
@@ -19,7 +22,7 @@ function PokemonsList() {
 
     return (
         <div className='h-full overflow-auto'>
-            <div className="h-full md:grid md:grid-cols-4 md:grid-rows-5 flex flex-col">
+            <div className={`h-full flex flex-col ${mdGridClasses} ${lgGridClasses}`}>
                 {pokemonsList !== null && renderListOfPokemons()}
             </div>
         </div>
