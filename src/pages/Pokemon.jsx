@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
+import {camelize} from '../assets/js/util'
 
 function Pokemon({ props }) {
     const location = useLocation()
@@ -15,7 +16,7 @@ function Pokemon({ props }) {
             const respImage = await (await fetch(data.sprites.other["official-artwork"].front_default)).url
             
             const pokemon = {
-                name: name,
+                name: camelize(name),
                 img: respImage,
                 height: data.height,
                 weight: data.weight

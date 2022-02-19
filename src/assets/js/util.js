@@ -19,5 +19,9 @@ async function returnPokemonList(page) {
     return listOfPokemons
 }
 
+function camelize(word){
+    return word.charAt(0).toUpperCase() + word.substring(1)
+}
 
-export { returnOffSet, returnPokemonList }
+
+export { returnOffSet, returnPokemonList, camelize}
