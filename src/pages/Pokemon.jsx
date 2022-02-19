@@ -47,13 +47,13 @@ function Pokemon({ props }) {
     function renderPokemon() {
         return (
             <div className="flex items-center justify-center">
-                <div className="pokemonInfo">
-                    <img src={pokemon.img} alt="" className="h-98 w-98" />
-                    <div className="font-bold text-7xl">{pokemon.name}</div>
-                    <div>Height: {pokemon.height}, Weight: {pokemon.weight}</div>
+                <div className="pokemonInfo flex flex-col items-center">
+                    <img src={pokemon.img} alt="" className="h-98 w-98 mb-2" />
+                    <div className="font-bold text-4xl md:text-7xl">{pokemon.name}</div>
+                    <div className="mb-4">Height: {pokemon.height}, Weight: {pokemon.weight}</div>
                     <div className="flex">
                         {pokemon.types.map(item => (
-                            <img src={`/types/${item}.svg`} alt="icons of pokemon type" className={`${typesColors[item]} w-8 h-8 rounded-full p-1`}/>
+                            <img src={`/types/${item}.svg`} alt="icons of pokemon type" className={`${typesColors[item]} w-8 h-8 rounded-full p-1 mr-1`}/>
                         ))}
                     </div>
 
