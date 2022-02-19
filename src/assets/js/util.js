@@ -10,7 +10,7 @@ async function returnPokemonList(page) {
     let listOfPokemons = await Promise.all(
         list.map(item => {
             const poke = fetch(item.url).then(resp => resp.json()).then(json => {
-                return { id: json.id, name: item.name, image: json.sprites.front_default }
+                return { id: json.id, name: item.name, image: json.sprites.front_default, url:item.url }
             })
             return poke
         })
@@ -18,5 +18,6 @@ async function returnPokemonList(page) {
 
     return listOfPokemons
 }
+
 
 export { returnOffSet, returnPokemonList }

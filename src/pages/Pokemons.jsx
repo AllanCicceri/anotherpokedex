@@ -11,7 +11,7 @@ function Pokemons(){
     useEffect(() => {
         const getPokemons = async () => {
             const listOfPokemons = await returnPokemonList(0)
-            console.log(listOfPokemons)
+            
 
             setPokemonsList(listOfPokemons)
         }
