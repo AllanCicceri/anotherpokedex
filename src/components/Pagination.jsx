@@ -13,7 +13,7 @@ function Pagination({pageClick}) {
     }
 
     return (
-        <div className="h-100px flex items-end justify-end">
+        <div className="h-100px flex items-end justify-end overflow-hidden p-2">
             <ReactPaginate
                 previousLabel='<<'
                 nextLabel='>>'

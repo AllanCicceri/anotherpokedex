@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="relative w-screen h-screen bg-slate-100 pt-2 md:pt-4 overflow-hidden">
       <span className={`${commonImgClasses} ${mdImgClasses} ${lgImgClasses}`}></span>
-      <div className="relative h-full w-full z-20 flex flex-col justify-center items-center">
+      <div className="relative h-full w-full z-20 flex flex-col justify-center items-center p-2">
         <Router>
           <Nav />
           <Body />
