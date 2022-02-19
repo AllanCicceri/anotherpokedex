@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-import { camelize } from '../assets/js/util'
+import { camelize, typesColors} from '../assets/js/util'
 
 function Pokemon({ props }) {
     const location = useLocation()
@@ -19,9 +19,9 @@ function Pokemon({ props }) {
                 typesRes.push(item.type.name)
             })
 
-            let typesImg = []
+            let types = []
             typesRes.map( item => {
-                typesImg.push(`/types/${item}.svg`)
+                types.push(item)
             }
             )
 
@@ -31,8 +31,9 @@ function Pokemon({ props }) {
                 img: respImage,
                 height: data.height,
                 weight: data.weight,
-                types: typesImg
+                types: types
             }
+
 
             return pokemon
         }
@@ -52,7 +53,7 @@ function Pokemon({ props }) {
                     <div>Height: {pokemon.height}, Weight: {pokemon.weight}</div>
                     <div className="flex">
                         {pokemon.types.map(item => (
-                            <img src={item} alt="icons of pokemon type" className="bg-black w-10 h-10 "/>
+                            <img src={`/types/${item}.svg`} alt="icons of pokemon type" className={`${typesColors[item]} w-8 h-8 rounded-full p-1`}/>
                         ))}
                     </div>
 
