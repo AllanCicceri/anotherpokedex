@@ -5,7 +5,6 @@ import { BrowserRouter as Router} from 'react-router-dom'
 
 
 function App() {
-  //-mt-16 -ml-28
   const commonImgClasses = "absolute inline-block h-60 w-60 bg-bgPokeball bg-cover opacity-30 -right-6 -top-12"
   const mdImgClasses = "md:w-80 md:h-80 md:ml-0"
   const lgImgClasses = "lg:w-128 lg:h-128 lg:-mt-68 lg:-ml-20"

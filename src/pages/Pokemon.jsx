@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-import { camelize, typesColors} from '../assets/js/util'
+import { camelize, typesColors } from '../assets/js/util'
 
-function Pokemon({ props }) {
+function Pokemon() {
     const location = useLocation()
-    const { name, img, url } = location.state
+    const { name, url } = location.state
 
     const [pokemon, setPokemon] = useState(null)
 
@@ -13,6 +13,7 @@ function Pokemon({ props }) {
         async function getPokemonInfo() {
             const response = await fetch(url)
             const data = await response.json()
+            console.log(data.moves)
             const respImage = (await fetch(data.sprites.other["official-artwork"].front_default)).url
             let typesRes = []
             data.types.map(item => {
@@ -20,7 +21,7 @@ function Pokemon({ props }) {
             })
 
             let types = []
-            typesRes.map( item => {
+            typesRes.map(item => {
                 types.push(item)
             }
             )
@@ -46,22 +47,25 @@ function Pokemon({ props }) {
 
     function renderPokemon() {
         return (
-            <div className="flex items-center justify-center">
+
+            <div className="w-full h-full flex justify-center items-center">
                 <div className="pokemonInfo flex flex-col items-center">
                     <img src={pokemon.img} alt="" className="h-98 w-98 mb-2" />
-                    <div className="font-bold text-4xl md:text-7xl">{pokemon.name}</div>
+                    <div className="font-bold text-4xl md:text-7xl mb-2">{pokemon.name}</div>
                     <div className="mb-4">Height: {pokemon.height}, Weight: {pokemon.weight}</div>
                     <div className="flex">
                         {pokemon.types.map(item => (
-                            <img src={`/types/${item}.svg`} alt="icons of pokemon type" className={`${typesColors[item]} w-8 h-8 rounded-full p-1 mr-1`}/>
+                            <img src={`/types/${item}.svg`} alt="icons of pokemon type" className={`${typesColors[item]} w-8 h-8 rounded-full p-1 mr-1`} />
                         ))}
                     </div>
 
                 </div>
-                <div className="pokemonMoves">
+                {/* <div className="bg-slate-100 p-4 h-5/6 shadow-xl rounded-xl">
+                        teste
+                    </div> */}
 
-                </div>
             </div>
+
         )
     }
 
